@@ -32,4 +32,22 @@ but, when a piece moves, the program switches the dictionary of the piece and th
 Because of this, I thought it was better to code the color system as a separated part from the square dictionary.
 
   The main game happens in a while loop in the main function. The while loops always checks the variable 'winner' to see if someone won.
-  The variable 'winner' is used to store the name of the player who won the game, but 
+The variable 'winner' is used to store the name of the player who won the game, but while there's no winer, the variable is set as 'NONE'.
+Each iteration checks if the variable is different than 'NONE' and, if so, it ends the game and announces the winner.
+
+  In the actual game, it is not possible to actually eat the opponent's king, only putting it at checkmate.
+It also is not possible to move your king to a position in which the king is in check.
+I didn't get attached to these kind of strict rules of actual chess, so the game simply ends when the king of one of the players gets eaten.
+I didn't implement checkmate, as it would be a very complicated mechanic to implement, and, 
+althrough a very iconic part of the game, it wouldn't affect too much the gameplay
+(as for one to be able to eat the opponent's king, it usually means that the king was already in check).
+
+  It would also be a good ideia to prompt first for the piece the player wants to move, calculate all the possible square this specific piece may move to, 
+show them to the players, and, only after that, prompt the player for the square the piece is to be moved to.
+With this method, it would be a tad easier to implement checkmate (for checkmate, it would need to analyse all the possible movements of each of the opponent's pieces)
+and it would also be more user-friendly for people that don't know very much the movements of each piece.
+I just choose my method to prioritize the quickness of the game.
+
+  Also, it's important to note that, at one point, I used the new match case statement that was introduced in Python 3.10.
+If you have a version of python prior to 3.10, you may change this part of the code to an if else statement and it will work just fine
+(happily, the match case statement I used was very small and simple, I just wanted to test it out).
