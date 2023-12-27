@@ -478,6 +478,7 @@ def queen(chessboard, old_i, old_j, new_i, new_j):
 def king(old_i, old_j, new_i, new_j):
     if abs(old_i - new_i) > 1 or abs(old_j - new_j) > 1:
         return False
+    return True
 
 
 # Executes the main function.
