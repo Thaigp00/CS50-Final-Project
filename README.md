@@ -1,5 +1,5 @@
 # Terminal based Chess in Python.
-#### Video Demo:  <URL HERE>
+#### Video Demo:  https://www.youtube.com/watch?v=qM_B7d6JY_U
 #### Description:
   I represented the chessboard as a list of lists (each sublist represents each line of the chessboard). 
 Each element of a sublist is a dictionary that represents a square in the chessboard.
